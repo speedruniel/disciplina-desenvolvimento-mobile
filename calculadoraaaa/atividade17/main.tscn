@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://ccrkyn8lx1cea"]
 
-[ext_resource type="Script" uid="uid://ve54kr86urui" path="res://atividade17/calculadora.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ve54kr86urui" path="res://atividade17/calculadora.gd" id="1_4tr34"]
 
-[node name="main" type="Control"]
+[node name="calculadora" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_ig7tw")
+script = ExtResource("1_4tr34")
 
 [node name="num1" type="TextEdit" parent="."]
 layout_mode = 0
