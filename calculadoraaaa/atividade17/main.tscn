@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccrkyn8lx1cea"]
+
+[ext_resource type="Script" uid="uid://ve54kr86urui" path="res://atividade17/calculadora.gd" id="1_ig7tw"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ig7tw")
+
+[node name="num1" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 7.0
+offset_right = 160.0
+offset_bottom = 69.0
+placeholder_text = "numero 1"
+
+[node name="num2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 85.0
+offset_right = 161.0
+offset_bottom = 160.0
+placeholder_text = "numero 2"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 184.0
+offset_right = 172.0
+offset_bottom = 215.0
+item_count = 4
+popup/item_0/text = "soma"
+popup/item_0/id = 0
+popup/item_1/text = "subtracao"
+popup/item_1/id = 1
+popup/item_2/text = "multiplicacao"
+popup/item_2/id = 2
+popup/item_3/text = "divisao"
+popup/item_3/id = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 16.0
+offset_right = 344.0
+offset_bottom = 69.0
+text = "Calcular"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 168.0
+offset_right = 308.0
+offset_bottom = 191.0
+text = "RESULTADO"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
