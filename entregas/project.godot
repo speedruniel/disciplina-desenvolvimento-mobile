@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Entregas"
+run/main_scene="uid://bbx161nob8i8t"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
