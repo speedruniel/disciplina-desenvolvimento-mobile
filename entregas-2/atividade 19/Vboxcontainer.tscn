@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://cru6gtfnhyjc2"]
+
+[ext_resource type="Script" uid="uid://ch7tjo2tfypw4" path="res://atividade 19/vboxcontainer.gd" id="1_yeeeo"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yeeeo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 123.0
+offset_bottom = 128.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Nome"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "idade"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="BtnMostrar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Mostrar Dados"
+
+[node name="ResultadoLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = " "
