@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcoyi3076jek1"]
+
+[ext_resource type="Script" uid="uid://ci0nrhqhrdvl8" path="res://atividade 18/progressbar_e_timers.gd" id="1_heala"]
+[ext_resource type="Texture2D" uid="uid://ba1s0u4rtyty8" path="res://atividade 18/circulovazio.svg" id="2_ft8qs"]
+[ext_resource type="Texture2D" uid="uid://cs3wgibekkrho" path="res://atividade 18/circulocheio.svg" id="3_88ohu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_heala")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 52.0
+offset_right = 763.0
+offset_bottom = 692.0
+fill_mode = 4
+texture_under = ExtResource("2_ft8qs")
+texture_progress = ExtResource("3_88ohu")
+
+[node name="Label" type="Label" parent="TextureProgressBar"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 175.0
+offset_right = 366.0
+offset_bottom = 448.0
+theme_override_font_sizes/font_size = 200
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 163.0
+offset_right = 1112.0
+offset_bottom = 369.0
+theme_override_font_sizes/font_size = 100
+text = "+50"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="value_changed" from="TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
